@@ -16,7 +16,8 @@ setup(name='software_name',
       # list of packages you want you application/lib install
       packages=['packagdescription', 'package_two'],
       license= 'the licence you are distributing your software under',
-      scripts=['holydisplay'],
+      # list of scripts supplied by your application
+      scripts=['script1', 'bin/script2'],
       keywords='a series of keywords separates by spaces',
      )
 
