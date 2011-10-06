@@ -1,0 +1,10 @@
+# this is a wrapper for a command launched for ii
+# when the command end this will send a privmsg to the nick specifyied here
+# usage: irc command
+#!/bin/bash
+
+# launch the commnand
+"$@"
+
+# when command end, tell it to you via private message
+echo "/privmsg YOUR_NICK :\"$@\" has terminated" > /path/to/irc/server/in
