@@ -20,7 +20,7 @@ do
     ii \\
         -i "irc" \\
         -s "irc.my_server_addr.net" \\
-        -p "port number of the server" \\
+        -p "port number of the server, often 6667" \\
         -n "bot name" \\
         -f "bot name"
 done
