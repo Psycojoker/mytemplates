@@ -9,18 +9,18 @@ do
     # (echo "wait"; sleep 3; echo "/privmsg nickserv :identify password" > "$IN_PATH") &
     # be sure to check for the correct timing for identifying and joining certain chans that need identification
 
-    # if you only have one chan
-    (sleep 5; echo "/j #my_chan" > $IN_PATH) &
+    # if you only have one chan
+    (sleep 5; echo "/j #my_chan" > $IN_PATH) &
 
-    # if you have multiple chans and want to add new chans easily (you just need to do an "echo chan_name >> chans")
-    # for i in `cat chans`
-    # do (sleep 5; echo "/j $i" > $IN_PATH) &
-    # done
+    # if you have multiple chans and want to add new chans easily (you just need to do an "echo chan_name >> chans")
+    # for i in `cat chans`
+    # do (sleep 5; echo "/j $i" > $IN_PATH) &
+    # done
 
-    ii \\
-        -i "irc" \\
-        -s "irc.my_server_addr.net" \\
-        -p "port number of the server, often 6667" \\
-        -n "bot name" \\
-        -f "bot name"
+    ii \\
+        -i "irc" \\
+        -s "irc.my_server_addr.net" \\
+        -p "port number of the server, often 6667" \\
+        -n "bot name" \\
+        -f "bot name"
 done
