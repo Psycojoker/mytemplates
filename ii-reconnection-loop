@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # this should looks like irc/irc.freenode.net/in
-IN_PATH="path/to/the/server/in"
+SERVER="irc.my_server_addr.net"
+IN_PATH="irc/$SERVER/in"
 
 while true
 do
@@ -19,7 +20,7 @@ do
 
     ii \\
         -i "irc" \\
-        -s "irc.my_server_addr.net" \\
+        -s "$SERVER" \\
         -p "port number of the server, often 6667" \\
         -n "bot name" \\
         -f "bot name"
