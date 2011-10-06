@@ -18,10 +18,10 @@ do
     # do (sleep 5; echo "/j $i" > $IN_PATH) &
     # done
 
-    ii \\
-        -i "irc" \\
-        -s "$SERVER" \\
-        -p "port number of the server, often 6667" \\
-        -n "bot name" \\
+    ii \
+        -i "irc" \
+        -s "$SERVER" \
+        -p "port number of the server, often 6667" \
+        -n "bot name" \
         -f "bot name"
 done
