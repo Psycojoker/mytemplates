@@ -6,10 +6,10 @@ PATH=$SERVER$CHAN
 BOT_NAME="bot_name"
 
 # get all lines not told by the bot that are told by users
-tail -n 0 -f "$PATH/out" | grep -v --line-buffered "<$BOT_NAME>" | grep --line-buffered "\\>" | while read -r line
+tail -n 0 -f "$PATH/out" | grep -v --line-buffered "<$BOT_NAME>" | grep --line-buffered "\>" | while read -r line
 do
     # debug
-    printf  '%s\\n' "$line"
+    printf  '%s\n' "$line"
     message_text=`printf '%s\n' "$line" | sed 's/.\+> //'`
     case $message_text in
         !debug)
@@ -18,4 +18,4 @@ do
           args=$(printf '%s\n' "$message_text" | sed 's/!args \?//')
           printf 'args: %s\n' "$args" ;;
     esac
-done`"`
+done
