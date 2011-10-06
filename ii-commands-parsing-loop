@@ -16,6 +16,6 @@ do
           echo "working!" >> $IRC_PATH/in ;;
         !args\ *)
           args=$(printf '%s\n' "$message_text" | sed 's/!args \?//')
-          printf 'args: %s\n' "$args" ;;
+          printf 'args: %s\n' "$args" > $IRC_PATH/in ;;
     esac
 done
