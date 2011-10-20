@@ -3,5 +3,7 @@
 # display search results from twitter like a tail -f
 # -n 0 avoid displaying initials elements
 # -i 120 refresh every 2 minutes
+# -K ignore key errors
+# -r reverse display order of items
 # the sed command put the twitter username at the beginning of the displayed line
-feedstail -u "http://search.twitter.com/search.atom?q=researched_term" -n 0 -i 120 -f "{title} - {link}" | sed -u 's/\(.\+http:\/\/twitter.com\/\([^\/]\+\)\/.\+\)/\2: \1/'
+feedstail -u "http://search.twitter.com/search.atom?q=researched_term" -n 0 -i 120 -f "{title} - {link}" -K -r | sed -u 's/\(.\+http:\/\/twitter.com\/\([^\/]\+\)\/.\+\)/\2: \1/'
