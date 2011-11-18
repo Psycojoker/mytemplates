@@ -147,19 +147,29 @@ def conditionnaly_create_dir(path):
         os.mkdir(path)
 
 def create_template(name):
+    print "creating " + name
     conditionnaly_create_dir(DIR + '/' + name)
+    print "creating " + name + "/bin"
     conditionnaly_create_dir(DIR + '/' + name + "/bin")
-    conditionnaly_create_dir(DIR + '/' + name + "/" + name)
+    print "creating " + name + "/bin/" + name
     open(DIR + '/' + name + "/bin/" + name, "w").write(bin % (name, name, name, name, name))
     os.system("chmod 755 " + DIR + '/' + name + "/bin/" + name)
+    print "creating " + name + "/" + name
+    conditionnaly_create_dir(DIR + '/' + name + "/" + name)
+    print "creating " + name + "/" + name + "/" + name + ".py"
     open(DIR + '/' + name + "/" + name + "/" + name + ".py", "w").write(main_file)
+    print "creating " + name + "/" + name + "/utils.py"
     open(DIR + '/' + name + "/" + name + "/utils.py", "w").write(utils)
+    print "creating " + name + "/" + name + "/config.py"
     open(DIR + '/' + name + "/" + name + "/config.py", "w").write(config)
+    print "creating " + name + "/" + name + "/__init__.py"
     open(DIR + '/' + name + "/" + name + "/__init__.py", "w").write("from %s import run\n\n__version__ = '0.1'" % name)
+    print "creating " + name + "/setup.py"
     open(DIR + '/' + name + "/setup.py", "w").write(setup_py % (name, name, name, name))
 
 if __name__ == "__main__":
     if not sys.argv[1:]:
+        print "I will create a set of files for creating a python cli tool"
         print "Error: need a application name"
         sys.exit(1)
 
