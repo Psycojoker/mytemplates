@@ -28,7 +28,6 @@ signal(SIGINT, stop)
 
 if __name__ == '__main__':
     parser = ArgumentParser('%s')
-    # Standards rsstail parameters
     parser.add_argument('-a', '--argument', help='an example argument')
 
     options = parser.parse_args()
