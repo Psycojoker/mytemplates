@@ -1,0 +1,7 @@
+[program:name]
+command=cat
+directory=/home/bram/path
+user=bram
+redirect_stderr=True
+autostart=true
+autorestart=true
