@@ -1,0 +1,7 @@
+from fabric.api import run, env, sudo, local
+
+env.user = "bram"
+env.hosts = ['perdu.com']
+
+def pouet():
+    local("echo pouet")
